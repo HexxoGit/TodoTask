@@ -16,7 +16,7 @@ export const TodoWrapper = ({ theme } : { theme: string}) => {
             const parsedTodos = JSON.parse(storedTodos);
             setTodos(parsedTodos);
         }
-        console.log("refreshed");
+        console.log('refreshed');
     }, []);
 
     const addTodo = (todo: any) => {
@@ -66,21 +66,21 @@ export const TodoWrapper = ({ theme } : { theme: string}) => {
             <TodoForm addTodo={addTodo} />
             {todos.length > 0 ? (
                 <>
-                <div className="list-header">
-                    <div className="left-content">{`${activeTasksCount} tarefas em falta`}</div>
-                    <div className="filter-dropdown">
-                        <label htmlFor="filterSelect">Filtrar por</label>
+                <div className='list-header'>
+                    <div className='left-content'>{`${activeTasksCount} tarefas em falta`}</div>
+                    <div className='filter-dropdown'>
+                        <label htmlFor='filterSelect'>Filtrar por</label>
                         <select
-                        id="filterSelect"
+                        id='filterSelect'
                         value={filter}
                         onChange={(e) => setFilter(e.target.value)}>
-                        <option value="todas">Todas</option>
-                        <option value="activas">Por realizar</option>
-                        <option value="completas">Completas</option>
+                        <option value='todas'>Todas</option>
+                        <option value='activas'>Por realizar</option>
+                        <option value='completas'>Completas</option>
                         </select>
                     </div>
                 </div>
-                <div className="all-todos">
+                <div className='all-todos'>
                     {filteredTodos.map((todo) => (
                     <Todo
                     key={todo.id}
@@ -89,8 +89,7 @@ export const TodoWrapper = ({ theme } : { theme: string}) => {
                     deleteTodo={deleteTodo}/>
                     ))}
                 </div>
-
-                <p className="delete-completed" onClick={deleteCompletedTasks}>
+                <p className='delete-completed' onClick={deleteCompletedTasks}>
                     Limpar tarefas completas
                 </p>
                 </>
