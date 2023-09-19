@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: small;
     margin: 0;
     padding: 0;
@@ -32,6 +39,7 @@
     background-color: #dfdfdf;
   }
   .TodoWrapper.dark {
+    color: #3368b7;
     background-color: #000000;
   }
   
@@ -167,13 +175,24 @@
     font-weight: bold;
   }
 
-  .theme-mode button {
+  .App.light button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
-    background: none;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+  }
+
+  .App.dark button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #3368b7;
     border: none;
     cursor: pointer;
   }

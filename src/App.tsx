@@ -1,11 +1,7 @@
 import './App.css';
 import { TodoWrapper } from './components/TodoWrapper';
 import { createContext, useState, useEffect } from 'react';
-
-type ThemeContextType = {
-  theme: string;
-  toggleTheme: () => void;
-};
+import { ThemeContextType } from './types/types';
 
 export const ThemeContext = createContext<ThemeContextType | null>(null);
 
@@ -26,7 +22,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`App ${theme}`}>
-        <span>{modeText}</span>
+        <h5>{modeText}</h5>
         <button onClick={toggleTheme}>
           <img src={theme === 'dark' ? '/images/icon-moon.svg?url' : '/images/icon-sun.svg?url'} alt='Theme Icon' />
         </button>

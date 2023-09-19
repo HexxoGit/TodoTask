@@ -8,8 +8,6 @@
 - [My process](#my-process)
   - [Built with](#built-with)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -33,7 +31,6 @@ Users should be able to:
 
 ## My process
 
-**Note: Quick summary of your tought process while doing the challenge. No big deal.**
 As a first aproach to this challange my ideia was to create a TodoWraper component where i could handle most of the logic for this task.
 I started by creating the more basic objectives like Create new tasks, mark them as completed and delete them followed by Filter and Clear list part.
 Implementing data storage through refreshes was really simple compared to changing themes, which was something i did not plan accordingly while doing the tasks.
