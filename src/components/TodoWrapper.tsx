@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { TodoForm } from "./TodoForm";
 import { Task } from "../domain/Task.ts"
 import { Todo } from "./Todo.tsx";
@@ -7,7 +7,16 @@ export const TodoWrapper = () => {
 
     const [todos, setTodos] = useState<Task[]>([]);
     const [filter, setFilter] = useState('Todas');
-    const activeTasksCount = todos.filter((todo) => !todo.completed).length;
+    const activeTasksCount = Array.isArray(todos)
+        ? todos.filter((todo) => !todo.completed).length : 0;
+
+    useEffect(() => {
+        const storedTodos = localStorage.getItem('todos');
+        if (storedTodos) {
+            const parsedTodos = JSON.parse(storedTodos);
+            setTodos(parsedTodos);
+        }
+    }, []);
 
     const addTodo = (todo: any) => {
         const newTask: Task = {
@@ -15,31 +24,39 @@ export const TodoWrapper = () => {
             name: todo,
             completed: false,
         };
-        setTodos([...todos, newTask]);
+        const newTodos = [...todos, newTask];
+        setTodos(newTodos);
+        localStorage.setItem('todos', JSON.stringify(newTodos));
     }
 
-    const toggleComplete = (id: any) => {
-      setTodos(
-        todos.map((todo) =>
-          todo.id === id ? { ...todo, completed: !todo.completed } : todo
-        )
-      );
+    const toggleComplete = (id: number) => {
+        const newTodos = todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo);
+        setTodos(newTodos);
+        localStorage.setItem('todos', JSON.stringify(newTodos));
     }
 
-    const deleteTodo = (id: number) => setTodos(todos.filter((todo) => todo.id !== id));
-
-    const filteredTodos = todos.filter((todo) => {
-        if (filter === 'activas') {
-          return !todo.completed;
-        } else if (filter === 'completas') {
-          return todo.completed;
+    const deleteTodo = (id: number) => {
+        if (Array.isArray(todos)) {
+            const newTodos = todos.filter((todo) => todo.id !== id);
+            setTodos(newTodos);
+            localStorage.setItem('todos', JSON.stringify(newTodos));
         }
+    }
+
+    const filteredTodos = Array.isArray(todos)
+        ? todos.filter((todo) => {
+            if (filter === 'activas') {
+                return !todo.completed;
+            } else if (filter === 'completas') {
+                return todo.completed;
+            }
         return true;
-    });
+    }): [];
     
     const deleteCompletedTasks = () => {
-        const remainingTasks = todos.filter((todo) => !todo.completed);
-        setTodos(remainingTasks);
+        const newTodos = todos.filter((todo) => !todo.completed);
+        setTodos(newTodos);
+        localStorage.setItem('todos', JSON.stringify(newTodos));
     };
 
     return (
