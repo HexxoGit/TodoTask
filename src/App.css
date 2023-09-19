@@ -1,0 +1,157 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #light body {
+    background-color: #dfdfdf;
+  }
+  #dark body {
+    background-color: #535252;
+  }
+  
+  .App {
+    text-align: left;
+  }
+
+  h1 {
+    color: #000000;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .TodoWrapper {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /*padding: 2rem;*/
+    border-radius: 5px;
+  }
+  #light .TodoWrapper {
+    background-color: #dfdfdf;
+  }
+  #dark .TodoWrapper {
+    background-color: #535252;
+  }
+  
+  .TodoForm {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .todo-input {
+    outline: none;
+    background: #fbfbfb;
+    border: 1px solid #dfdfdf;
+    padding: 0.8rem 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 600px;
+    color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    &::placeholder {
+      color: #000000;
+    }
+  }
+  
+  .todo-btn {
+    background: #8758ff;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+    
+  }
+  
+  .Todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    color: #000000;
+    padding: 0.8rem 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #dfdfdf;
+    }
+  }
+  .Todo:hover .delete-icon {
+    display: block;
+  }
+
+  .Todo p {
+    margin: 0;
+    flex: 1;
+  }
+  
+  .fa-trash {
+    margin-left: 0.75rem;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+  }
+
+  .all-todos {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .todo-checkbox {
+    transform: scale(1.5);
+    margin-right: 25px;
+    /*&:checked {
+      background-color: #000000;
+    }*/
+  }
+
+  .delete-icon {
+    display: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .filter-dropdown {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  select#filterSelect {
+    border: 1px solid transparent; /* Remove border color */
+    border-radius: 0; /* Remove border rounding */
+    padding: 2px; /* Add padding as needed */
+    outline: none; /* Remove default focus outline */
+  }
+
+  label {
+    margin-right: 10px; /* Add spacing between label and dropdown */
+  }
+
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .delete-completed {
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
