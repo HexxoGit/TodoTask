@@ -134,8 +134,11 @@
   select#filterSelect {
     border: 1px solid transparent;
     border-radius: 0;
-    padding: 2px;
+    padding: 3px;
     outline: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   label {
