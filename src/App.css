@@ -27,7 +27,7 @@
   h1 {
     color: #000000;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .TodoWrapper {
@@ -61,15 +61,6 @@
     &::placeholder {
       color: #000000;
     }
-  }
-  
-  .todo-btn {
-    background: #8758ff;
-    color: #fff;
-    border: none;
-    padding: 0.55rem;
-    cursor: pointer;
-    
   }
   
   .Todo {
