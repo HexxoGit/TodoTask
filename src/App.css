@@ -7,7 +7,7 @@
   }
 
   body {
-    background: #dfdfdf;
+    background-color: #dfdfdf;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +26,13 @@
   .TodoWrapper {
     margin-top: 5rem;
     margin-bottom: 5rem;
-    /*padding: 2rem;*/
     border-radius: 5px;
   }
-  #light .TodoWrapper {
+  .TodoWrapper.light {
     background-color: #dfdfdf;
   }
-  #dark .TodoWrapper {
-    background-color: #535252;
+  .TodoWrapper.dark {
+    background-color: #000000;
   }
   
   .TodoForm {
@@ -150,7 +149,16 @@
     margin-top: 10px;
   }
 
-  .theme-mode {
+  .App.dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 50px;
+    font-weight: bold;
+  }
+
+  .App.light {
     display: flex;
     align-items: center;
     justify-content: center;

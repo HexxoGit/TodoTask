@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react"
-import { TodoForm } from "./TodoForm";
-import { Task } from "../domain/Task.ts"
-import { Todo } from "./Todo.tsx";
+import { useState, useEffect } from 'react'
+import { TodoForm } from './TodoForm';
+import { Task } from '../domain/Task.ts';
+import { Todo } from './Todo.tsx';
 
-export const TodoWrapper = () => {
+export const TodoWrapper = ({ theme } : { theme: string}) => {
 
     const [todos, setTodos] = useState<Task[]>([]);
     const [filter, setFilter] = useState('Todas');
@@ -16,6 +16,7 @@ export const TodoWrapper = () => {
             const parsedTodos = JSON.parse(storedTodos);
             setTodos(parsedTodos);
         }
+        console.log("refreshed");
     }, []);
 
     const addTodo = (todo: any) => {
@@ -60,7 +61,7 @@ export const TodoWrapper = () => {
     };
 
     return (
-        <div className='TodoWrapper'>
+        <div className={`TodoWrapper ${theme === 'dark' ? 'dark' : 'light'}`}>
             <h1>Lista de tarefas</h1>
             <TodoForm addTodo={addTodo} />
             {todos.length > 0 ? (

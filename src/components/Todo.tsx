@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { Task } from "../domain/Task"
+import { useState } from 'react'
+import { Task } from '../domain/Task'
 
 export const Todo = ({ task, toggleComplete, deleteTodo }: 
         { task: Task, toggleComplete: (taskId: number) => void, deleteTodo: (taskId: number) => void }) => {
@@ -23,7 +23,7 @@ export const Todo = ({ task, toggleComplete, deleteTodo }:
             onChange={handleCheckboxClick}
             className='todo-checkbox'
             />
-            <p className={`${task.completed ? 'completed' : ""}`}>{task.name}</p>
+            <p className={`${task.completed ? 'completed' : ''}`}>{task.name}</p>
             <div className='delete-icon' onClick={handleDeleteClick}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'

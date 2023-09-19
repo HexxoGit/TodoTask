@@ -1,58 +1,56 @@
-# Todo app
+# Todo app solution
 
-![Design preview for the Todo app coding challenge](./design/desktop-preview.png)
+## Table of contents
 
-## Welcome! 👋
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## The challenge
+## Overview
 
-Your challenge is to build out this todo app and get it looking as close to the design as possible.
-If possible, avoid using any CSS Frameworks such as Bootstrap/tailwind or JS component libraries such as MaterialUI/ChakraUI.
-It is highly appreciated if you try to use the already configured SCSS compiler and try to write your own style ruleset.
+### The challenge
 
-Your users should be able to:
+Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
-- **Bonus**: The todos data should be stored through refreshes.
-- **Bonus**: Drag and drop to reorder items on the list
+- :x: View the optimal layout for the app depending on their device's screen size
+- :white_check_mark: See hover states for all interactive elements on the page
+- :white_check_mark: Add new todos to the list
+- :white_check_mark: Mark todos as complete
+- :white_check_mark: Delete todos from the list
+- :white_check_mark: Filter by all/active/complete todos
+- :white_check_mark: Clear all completed todos
+- :x: Toggle light and dark mode
+- :x: **Bonus**: Drag and drop to reorder items on the list
+- :white_check_mark: **Bonus**: The todos data should be stored through refreshes.
+
+**Note: Fill with the functionalities you managed to implement while doing the challenge.**
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+## My process
+
+**Note: Quick summary of your tought process while doing the challenge. No big deal.**
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- [React](https://reactjs.org/) - JS library
 
 
-## Where to find everything
-
-Your task is to build out the project to the designs inside the `/design` folder. The app must be responsive. 
-
-The design is in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
-
-You will find all the required assets in the `/images` folder. The assets are already optimized.
-
-This repo is already pre-configured with the default vite react-ts template.
-[React official docs](https://react.dev/)
-
-## Building your project
-
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Clone the repository using git clone https://github.com/Logrise/FrontEnd-TodoExercise.git
-2. Make the necessary changes to the code.
-3. Commit the changes using git commit -m "<commit-message>".
-4. Push the changes to the remote repository using git push.
-5. Share the repository URL with the evaluator for code evaluation.
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-**Have fun building!** 🚀

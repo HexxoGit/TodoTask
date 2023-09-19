@@ -16,6 +16,7 @@ function App() {
 
   useEffect(() => {
     setModeText(theme === 'light' ? 'Modo Diurno' : 'Modo Noturno');
+    console.log(theme);
   }, [theme]);
 
   const toggleTheme = () => {
@@ -24,13 +25,13 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
-      <div className='theme-mode'>
+      <div className={`App ${theme}`}>
         <span>{modeText}</span>
         <button onClick={toggleTheme}>
           <img src={theme === 'dark' ? '/images/icon-moon.svg?url' : '/images/icon-sun.svg?url'} alt='Theme Icon' />
         </button>
       </div>
-      <TodoWrapper />
+      <TodoWrapper theme={theme}/>
     </ThemeContext.Provider>
   )
 }

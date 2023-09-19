@@ -1,15 +1,15 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 export const TodoForm = ({addTodo} : {addTodo:any}) => {
 
-    const [value, setValue] = useState("")
+    const [value, setValue] = useState('')
 
     const handleSubmit = (e:any)=> {
         e.preventDefault();
         if(value) {
             console.log(value);
             addTodo(value);
-            setValue("");
+            setValue('');
         }
     }
 
